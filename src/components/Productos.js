@@ -1,8 +1,28 @@
 import React from "react";
+import { useEffect } from "react";
+import Producto from "./Producto";
+
+// Redux
+import { obtenerProductosAction } from "../actions/productosAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const Productos = () => {
+  const   dispatch    =   useDispatch();
+
+  useEffect(()  =>  {
+    const   obtenerProductos = ()    => dispatch(obtenerProductosAction()) ;
+    obtenerProductos();
+  },[]);
+
+  const loading = useSelector(state => state.productos.loading);
+  const error = useSelector(state=> state.productos.error);
+  const productos = useSelector(state=> state.productos.productos);
+
   return (
     <React.Fragment>
+      {error  ? <div  className="font-weight-bold alert alert-danger text-center mt-4">Error al cargar los productos</div>
+      : null
+      }
       <h2 className="text-center my-5">Listado de Productos</h2>
 
       <table className="table table-striped">
@@ -13,8 +33,16 @@ const Productos = () => {
             <th scope="col">Acciones</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+        {productos.map( producto => (
+                        <Producto
+                            key={producto.id}
+                            producto={producto}
+                        />
+                    ))}
+        </tbody>
       </table>
+      {loading  ? "Cargando productos"  : null}
     </React.Fragment>
   );
 };
