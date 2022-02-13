@@ -24,6 +24,51 @@
       "nombre": "Thinking in Java",
       "precio": "120",
       "id": 5
+    },
+    {
+      "nombre": "React",
+      "precio": "120",
+      "id": 6
+    },
+    {
+      "nombre": "java",
+      "precio": "21",
+      "id": 7
+    },
+    {
+      "nombre": "Vue",
+      "precio": "12",
+      "id": 8
+    },
+    {
+      "nombre": "asd",
+      "precio": "2",
+      "id": 9
+    },
+    {
+      "nombre": "Elpidio",
+      "precio": "21",
+      "id": 10
+    },
+    {
+      "nombre": "Libro",
+      "precio": "23",
+      "id": 11
+    },
+    {
+      "nombre": "Cuentos",
+      "precio": "23",
+      "id": 12
+    },
+    {
+      "nombre": "Nuevo",
+      "precio": "12",
+      "id": 13
+    },
+    {
+      "nombre": "a",
+      "precio": "2",
+      "id": 14
     }
   ]
 }
