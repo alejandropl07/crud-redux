@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nombre": "Aprendiendo Redux",
-      "precio": 30
+      "precio": "30"
     },
     {
       "id": 2,
@@ -16,9 +16,9 @@
       "id": 3
     },
     {
-      "nombre": "La edad de Oro",
-      "precio": "100",
-      "id": 4
+      "id": 4,
+      "nombre": "Cien años de soledad",
+      "precio": "100"
     },
     {
       "nombre": "Thinking in Java",
@@ -46,14 +46,14 @@
       "id": 10
     },
     {
-      "nombre": "Libro",
-      "precio": "23",
-      "id": 11
+      "id": 11,
+      "nombre": "Libro editado",
+      "precio": "23"
     },
     {
+      "id": 12,
       "nombre": "Cuentos",
-      "precio": "23",
-      "id": 12
+      "precio": "200"
     }
   ]
 }

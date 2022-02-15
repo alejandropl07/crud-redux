@@ -1,6 +1,8 @@
 import { useState } from "react";
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 
 // Redux
 import { crearNuevoProductoAction } from "../actions/productosAction";
@@ -8,7 +10,7 @@ import { validarFormularioAction, validacionExito, validacionError } from "../ac
 import { useDispatch, useSelector } from "react-redux";
 
 
-const NuevoProducto    =   ({history})  =>  {
+const NuevoProducto    =   ()  =>  {
     const   [nombre,guardarNombre]  =   useState('');
     const   [precio,guardarPrecio]  =   useState('');
 
@@ -21,7 +23,8 @@ const NuevoProducto    =   ({history})  =>  {
 
     // Obtener los datos del state
     const error =   useSelector((state) =>  state.error.error);
-    const estado =   useSelector((state) =>  state);
+
+    const navigate   = useNavigate();
 
     //Agregar nuevo producto
     const submitNuevoProducto=  e   =>{
@@ -46,7 +49,7 @@ const NuevoProducto    =   ({history})  =>  {
         });
 
         //Redireccionar
-        history.pathname('/');
+        navigate('/');
     }
 
     return(
